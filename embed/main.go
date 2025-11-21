@@ -9,9 +9,18 @@ import (
 //go:embed h.png
 var himage []byte
 
+//go:embed infome.txt
+var infome string
+
+//go:embed main.go
+var embedcode string
+
 func main() {
 	fmt.Println("File Keep in embed")
 	_ = WriteFile("temp_of_h.png", himage)
+
+	fmt.Println(infome)
+	fmt.Println(embedcode)
 }
 
 func WriteFile(path string, img []byte) int {
