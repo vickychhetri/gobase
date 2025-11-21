@@ -51,6 +51,7 @@ func GetSize(path string) (int64, error) {
 	// Loop through every item inside the folder.
 	for _, entry := range contents {
 
+		fmt.Println("$->" + path + entry.Name())
 		// If the entry is a folder, recursively call GetSize() for that folder.
 		// entry.IsDir() returns TRUE for directories.
 		if entry.IsDir() {
